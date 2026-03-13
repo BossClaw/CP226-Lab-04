@@ -2,10 +2,10 @@
 
 5 clients, each hitting a 5-second sleep on the server sequential stacks them, threaded overlaps them.
 
-                        Sequential                                    Threaded
-  How it works          Client 2 waits for Client 1 to finish, etc.   All 5 clients handled at the same time
-  Expected Time         5 × 5s = ~25 seconds                          All overlap = ~5 seconds
-  Actual Measured Time  25.00                                         5.00
+What                  Sequential                                    Threaded
+How it works          Client 2 waits for Client 1 to finish, etc.   All 5 clients handled at the same time
+Expected Time         5 × 5s = ~25 seconds                          All overlap = ~5 seconds
+Actual Measured Time  25.00                                         5.00
 
 
 Reduction % (theoretical): ((25 - 5) / 25) × 100 = 80% reduction!!
